@@ -1,5 +1,5 @@
 # Assignment2
-WalkThrough Asigment2
+WalkThrough Assignment2
 
 Introduction
 Elevens is a single-player card game that uses a standard deck of playing cards. The object of the
