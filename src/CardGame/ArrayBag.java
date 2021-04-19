@@ -22,8 +22,10 @@ public class ArrayBag<T> implements BagInterface<T> {
         numberOfEntries = 0 ;
 
     }
-//This is vasile verejan
+//This is crazy_v
     //Tina 2 2563
+
+
 
     public int getCurrentSize(){
         return numberOfEntries;
@@ -139,4 +141,3 @@ public class ArrayBag<T> implements BagInterface<T> {
 
     }
 }
- #123456
