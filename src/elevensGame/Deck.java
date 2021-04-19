@@ -16,7 +16,9 @@ public class Deck {
         String[] suitarray = {"H", "D", "S", "C"};
 
         for (String suitElement:suitarray) {
-
+            for (int i= 0; i<cardrating.length;i++){
+                System.out.println("New");
+            }
         }
     }
 
