@@ -19,10 +19,10 @@ public class ArrayBag<T> implements BagInterface<T> {
     public ArrayBag(int capacity) {
         T[] tempBag = (T[]) new Object[capacity];
         bag = tempBag;
-        numberOfEntries = 0;
+        numberOfEntries = 0 ;
 
     }
-
+//This is vasile verejan
 
     public int getCurrentSize(){
         return numberOfEntries;
