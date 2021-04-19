@@ -7,4 +7,6 @@ class Test{
         int j = 25;
         System.out.println(i + " " + j);
     }
+
+
 }

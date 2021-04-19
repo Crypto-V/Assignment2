@@ -1,4 +1,4 @@
-package myCardGame;
+package somePackageWithArrays;
 
 public interface CardStackInterface <T> {
     public int getCurrentSize();
