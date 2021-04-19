@@ -23,6 +23,7 @@ public class ArrayBag<T> implements BagInterface<T> {
 
     }
 //This is vasile verejan
+    //Tina
 
     public int getCurrentSize(){
         return numberOfEntries;
