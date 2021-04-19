@@ -22,7 +22,7 @@ public class ArrayBag<T> implements BagInterface<T> {
         numberOfEntries = 0;
 
     }
-/// change A
+/// change A..
 
     public int getCurrentSize(){
         return numberOfEntries;
