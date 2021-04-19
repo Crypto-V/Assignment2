@@ -22,8 +22,8 @@ public class ArrayBag<T> implements BagInterface<T> {
         numberOfEntries = 0 ;
 
     }
-//This is vasile verejan
-    //Tina 2 2563
+//This is crazy v
+    //Tina 2 2563fqfqagas
 //new change
     //another change
 
