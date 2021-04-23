@@ -1,33 +1,50 @@
 package elevensGame;
 
-import CardGame.BagSet;
-import CardGame.Card;
-import CardGame.Deck;
-import somePackageWithArrays.CardStack;
-
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class GameApp {
     public static void main(String[] args) {
-        elevensGame.Deck carddeck = new elevensGame.Deck();
-        System.out.println("Welcome to the game ");
-        carddeck.generateCards();
-        CardStack<elevensGame.Card> cs = carddeck.getDeck();
-        System.out.println(Arrays.toString(cs.toArray()));
+        Deck Cards = new Deck();
+        Cards.generateCards();
+        CardStack<Card> deck = Cards.getDeck();
+        System.out.println(Arrays.toString(deck.toArray()));
+        deck.shuffle();
+        System.out.println(Arrays.toString(deck.toArray()));
+        Cards.getPlayerhand();
 
-        //remove nine cards from the deck. Pass them to the player
+        Scanner input = new Scanner(System.in);
+        int x = 4;
+        while(x < 10){
+            Cards.printTable();
+            System.out.println("Please enter your desired location!");
+            Cards.remove2(input.nextInt(),input.nextInt());
+            Cards.fillUpPlayersHand();
+            x++;
 
-        BagSet<elevensGame.Card> playerhand = new BagSet(9);
-        for (int i = 0; i < 9; i++)
-        {
-            playerhand.addNewEntry(cs.remove());
         }
-        System.out.println(Arrays.toString(playerhand.toArray()));
-        System.out.println(Arrays.toString(cs.toArray()));
+
+        //Add method to the 11 when removing cards
+        //Create method to remove JQK
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+//        System.out.println("Welcome to the game ");
+//        carddeck.generateCards();
+//        CardStack<Card> cs = carddeck.getDeck();
+//        System.out.println(Arrays.toString(carddeck.getPlayerhand().toArray()));
+//        System.out.println(Arrays.toString(cs.toArray()));
 
 
 
@@ -49,6 +66,7 @@ public class GameApp {
 
 
     }
+
 
 
 }

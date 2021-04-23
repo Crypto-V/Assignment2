@@ -1,6 +1,4 @@
-package somePackageWithArrays;
-
-import elevensGame.Card;
+package elevensGame;
 
 import java.util.Random;
 

@@ -6,6 +6,9 @@ public class Card {
     private int cardRate;
 
     public Card() {
+        cardRank = null;
+        cardSuit = null;
+        cardRate = 0;
     }
 
     public Card(String rank, String suit, int rate){

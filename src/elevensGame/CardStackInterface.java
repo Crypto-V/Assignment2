@@ -1,4 +1,4 @@
-package somePackageWithArrays;
+package elevensGame;
 
 public interface CardStackInterface <T> {
     public int getCurrentSize();
