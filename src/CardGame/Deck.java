@@ -34,10 +34,4 @@ public class Deck{
         return dcards;
     }
 
-    public static void main(String[] args) {
-        Deck myDeck = new Deck();
-        for (Card c: myDeck.deck){
-            System.out.println(c);
-        }
-    }
 }

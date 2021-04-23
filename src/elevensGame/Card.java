@@ -39,10 +39,10 @@ public class Card {
     }
 
     public String toString() {
-        String str = "[";
-        str += cardRank +" of "+cardSuit+" Rate: "+cardRate;
-        str += "]";
-        return str;
+            String str = "[";
+            str += cardRank +" of "+cardSuit+" Rate: "+cardRate;
+            str += "]";
+            return str;
     }
 
 }

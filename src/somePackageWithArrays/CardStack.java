@@ -1,5 +1,8 @@
 package somePackageWithArrays;
 
+import elevensGame.Card;
+
+import java.util.Random;
 
 public final class CardStack<T> implements CardStackInterface<T> {
     private T[] deck;
@@ -8,6 +11,26 @@ public final class CardStack<T> implements CardStackInterface<T> {
     private boolean initialised = false;
     private static final int MAX_CAPACITY = 10000;
 
+    public T getElementById(int index){
+        T result = null;
+        if (!isEmpty() && index >= 0 && index < numOfEntries) {
+            result = deck[index];
+        }
+        return result;
+    }
+
+    //Shuffle method
+    public void shuffle() {
+        Random rng = new Random();
+
+        for (int i = deck.length- 1; i > 0; i--) {
+            // Swap the i-th card with a random one
+            int j = rng.nextInt(i + 1);
+            T tmp =  deck[j];
+            deck[j] = deck[i];
+            deck[i] = tmp;
+        }
+    }
 
     private boolean isArrayFull() {
         return (deck.length == numOfEntries);
@@ -18,7 +41,7 @@ public final class CardStack<T> implements CardStackInterface<T> {
             throw new SecurityException("CardStack was not initialised properly!");
     }
 
-    private T removeElementAt(int index) {
+    public T removeElementAt(int index) {
         T result = null;
         if (!isEmpty() && index >= 0 && index < numOfEntries) {
             result = deck[index];
