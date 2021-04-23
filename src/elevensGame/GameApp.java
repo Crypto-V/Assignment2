@@ -26,6 +26,8 @@ public class GameApp {
 
         //Add method to the 11 when removing cards
         //Create method to remove JQK
+        //Create Queue
+
 
 
 

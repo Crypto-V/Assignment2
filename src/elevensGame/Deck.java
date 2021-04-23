@@ -84,6 +84,37 @@ public class Deck {
 
     }
 
+    //TO DO
+    public void removeJQK(){
+        //Should check if we have this JQK
+    }
+
+    //TO DO
+    public void giveHint(){
+        //check for JQK
+        //Check 11
+    }
+
+    //TO Do
+    public void checkJQK(CardStack<Card> faceUp){
+        //check if the user have JQK faced up at the same time.Return boolean.
+
+    }
+    //Check for 11 TO DO
+    public void check11(){
+        // it will check if any of the combo of the number will make in sum 11.
+    }
+
+    //TO DO
+    public void checkLost(){
+        //we have to check if not check11() AND not checkJQK() than return true game won.
+    }
+
+    //To DO
+    public boolean checkWin(){
+        return deck.getCurrentSize() == 0;
+    }
+
 
 
     public CardStack<Card> getDeck() {
