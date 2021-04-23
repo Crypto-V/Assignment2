@@ -27,12 +27,17 @@ public class Deck{
     }
 
     //TO Do - Complete the toString method to return all the cards in a deck
-    public String toString(){
+    public Card[] toArray(){
 
-        String dcards = new String();
-        //To Do - Complete toString method
-
-
+        Card [] dcards = (Card[])new Object[52];
+        System.arraycopy(deck,1,dcards,0,52);
         return dcards;
+    }
+
+    public static void main(String[] args) {
+        Deck myDeck = new Deck();
+        for (Card c: myDeck.deck){
+            System.out.println(c);
+        }
     }
 }

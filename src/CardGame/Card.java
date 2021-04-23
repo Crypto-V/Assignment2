@@ -5,7 +5,7 @@ import java.util.Random;
 public class Card  {
 
     private String rank;
-    private Integer irank;
+    private Integer rate;
     private String suit;
 
     public Card(){
@@ -21,10 +21,10 @@ public class Card  {
         int rindex = rand.nextInt(13); //rindex can be between 0..13
         int sindex = rand.nextInt(4);  //sindex can be between 0..4
 
-        //To Do - Complete constructor to assign values to rank, suit, irank, numericrank
+        //To Do - Complete constructor to assign values to rank, suit, rate,
         this.suit = suitarray[sindex];
         this.rank = rankarray[rindex];
-        this.irank = cardrating[rindex];
+        this.rate = cardrating[rindex];
 
     }
 
@@ -35,7 +35,7 @@ public class Card  {
         return rank;
     }
 
-    public Integer getiRank() { return irank;}
+    public Integer getiRank() { return rate;}
 
     public String getSuit() {
         return suit;
@@ -46,7 +46,7 @@ public class Card  {
     }
 
     public void setIrank(Integer irank) {
-        this.irank = irank;
+        this.rate = irank;
     }
 
     public void setSuit(String suit) {
@@ -55,15 +55,15 @@ public class Card  {
 
     public String toString(){
 
-        if (irank == 11)
+        if (rate == 11)
         {
             return "Jack" + " of " + suit;
         }
-        else if (irank == 12)
+        else if (rate == 12)
         {
             return "Queen" + " of " + suit;
         }
-        if (irank == 13)
+        if (rate == 13)
         {
             return "King" + " of " + suit;
         }
@@ -71,7 +71,5 @@ public class Card  {
 
         return rank + " of  " + suit;
     }
-##6464564654646
-
 
 }

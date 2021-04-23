@@ -6,10 +6,9 @@ public class Card {
     private int cardRate;
 
     public Card() {
-
     }
 
-    public Card(String suit, String rank, int rate){
+    public Card(String rank, String suit, int rate){
         cardSuit = suit;
         cardRank = rank;
         cardRate = rate;
@@ -41,8 +40,9 @@ public class Card {
 
     public String toString() {
         String str = "[";
-        str += cardSuit +" of "+cardRank+" .Card Rate: "+cardRate;
+        str += cardRank +" of "+cardSuit+" Rate: "+cardRate;
         str += "]";
         return str;
     }
+
 }
