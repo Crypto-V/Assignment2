@@ -1,0 +1,14 @@
+<changelist name="Uncommitted_changes_before_Update_at_26_04_2021_12_35_pm_[Default_Changelist]" date="1619436933779" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_04_2021_12_35_pm_[Default_Changelist]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 26/04/2021 12:35 pm [Default Changelist]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Assignment2Java/elevensGame/Deck.class" />
+    <option name="AFTER_PATH" value="out/production/Assignment2Java/elevensGame/Deck.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_04_2021_12_35_pm_[Default_Changelist]/Deck.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Assignment2Java/elevensGame/Card.class" />
+    <option name="AFTER_PATH" value="out/production/Assignment2Java/elevensGame/Card.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_04_2021_12_35_pm_[Default_Changelist]/Card.class" />
+  </binary>
+</changelist>
