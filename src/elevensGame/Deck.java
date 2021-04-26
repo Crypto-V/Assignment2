@@ -25,6 +25,11 @@ public class Deck {
 
     //This method will generate the 52 cards and will add it into our Card list.
     public void generateCards() {
+        /*
+        * This method will generate the unique number of cards(52)
+        * that will be inserted into our cardstack variable deck.
+        * When called it will shuffle the cards directly to avoid calling the method repeatably.
+        */
         for (String suite : suitarray) {
             for (int i = 0; i < rankarray.length; i++) {
                 deck.addNewEntry(new Card(rankarray[i], suite, cardrating[i]));
@@ -36,7 +41,12 @@ public class Deck {
     }
 
     private CardStack<Card> playerHand() {
-//        deck.shuffle();
+        /*
+        * This method will get the first 9 elements of the shuffled deck.
+        * And it will populate our player hand with the removed cards.
+        *@returns - playerhand of a type CardStack<Cards>
+        */
+
         for (int i = 0; i < 9; i++) {
             playerhand.addNewEntry(deck.remove());
         }
@@ -44,8 +54,14 @@ public class Deck {
     }
 
     public void printTable() {
+        /*This method will be responsable for printing the example table
+        * plus our playerhand cards faced up.
+        */
         System.out.println("Follow the example table index to remove elements!");
         System.out.println("1|2|3|\n4|5|6|\n7|8|9|\n");
+
+        //As soon as the index will be 2 or 5 the cursor will move to the new line
+        // which will make our table to look like a matrice of 3x3.
 
         System.out.println("Actual Table!");
         String str = "";
@@ -54,8 +70,7 @@ public class Deck {
             if (i == 2) str += "\n ";
             else if (i == 5) str += "\n ";
         }
-
-
+        //Finally it will print the actual matrice.
         System.out.println(str);
 
     }

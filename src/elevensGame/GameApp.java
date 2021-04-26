@@ -6,9 +6,11 @@ import java.util.Scanner;
 public class GameApp {
     public static void main(String[] args) {
         Deck Cards = new Deck();
+        CardStack<Card> deck = Cards.getDeck();
+
         System.out.println("Cards were generated and shuffled!");
         Cards.generateCards();
-        CardStack<Card> deck = Cards.getDeck();
+
         System.out.println(Arrays.toString(deck.toArray()));
         Cards.getPlayerhand();
 
