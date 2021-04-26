@@ -9,7 +9,7 @@ public final class CardStack<T> implements CardStackInterface<T> {
     private boolean initialised = false;
     private static final int MAX_CAPACITY = 10000;
 
-    public T getElementById(int index){
+    public T getElementById(int index) {
         T result = null;
         if (!isEmpty() && index >= 0 && index < numOfEntries) {
             result = deck[index];
@@ -17,14 +17,14 @@ public final class CardStack<T> implements CardStackInterface<T> {
         return result;
     }
 
-    //Shuffle method
     public void shuffle() {
+        //Shuffle method will shuffle cards based on random value.
         Random rng = new Random();
 
-        for (int i = deck.length- 1; i > 0; i--) {
+        for (int i = deck.length - 1; i > 0; i--) {
             // Swap the i-th card with a random one
             int j = rng.nextInt(i + 1);
-            T tmp =  deck[j];
+            T tmp = deck[j];
             deck[j] = deck[i];
             deck[i] = tmp;
         }
