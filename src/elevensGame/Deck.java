@@ -32,14 +32,12 @@ public class Deck {
             }
         }
         deck.shuffle();
-        System.out.println("Shuffling the deck!");
+
     }
 
-    private  CardStack<Card> playerHand() {
-        deck.shuffle();
-        Card x;
-        for (int i = 0; i < 9; i++)
-        {
+    private CardStack<Card> playerHand() {
+//        deck.shuffle();
+        for (int i = 0; i < 9; i++) {
             playerhand.addNewEntry(deck.remove());
         }
         return playerhand;
@@ -51,10 +49,10 @@ public class Deck {
 
         System.out.println("Actual Table!");
         String str = "";
-        for (int i = 0;i<playerhand.getCurrentSize();i++){
-            str += playerhand.getElementById(i).getCardRank()+playerhand.getElementById(i).getCardSuit()+"|";
-            if(i == 2) str+="\n ";
-            else if(i == 5) str+="\n ";
+        for (int i = 0; i < playerhand.getCurrentSize(); i++) {
+            str += playerhand.getElementById(i).getCardRank() + playerhand.getElementById(i).getCardSuit() + "|";
+            if (i == 2) str += "\n ";
+            else if (i == 5) str += "\n ";
         }
 
 
@@ -62,59 +60,77 @@ public class Deck {
 
     }
 
-    public void remove2(int x,int y){
+    public void remove2(int x, int y) {
 
-        Card first = playerhand.removeElementAt(playerhand.getCurrentSize()-1);
-        System.out.println(first.toString()+" was removed!");
-        Card second = playerhand.removeElementAt(playerhand.getCurrentSize()-1);
-        System.out.println(second.toString()+" was removed!");
+        Card first = playerhand.removeElementAt(x - 1);
+        System.out.println(first.toString() + " was removed!");
+        Card second = playerhand.removeElementAt(y - 1);
+        System.out.println(second.toString() + " was removed!");
         System.out.println(deck.getCurrentSize());
 
     }
 
-    public void fillUpPlayersHand(){
-        int preSize = 9-playerhand.getCurrentSize();
+    public void removeJQK(int x, int y, int z) {
+        if (checkJQK(playerhand)) {
+            Card first = playerhand.removeElementAt(x - 1);
+            System.out.println(first.toString() + " was removed!");
+            Card second = playerhand.removeElementAt(y - 1);
+            System.out.println(second.toString() + " was removed!");
+            Card third = playerhand.removeElementAt(z - 1);
+            System.out.println(third.toString() + " was removed!");
+            System.out.println(deck.getCurrentSize());
+        }else System.out.println("No JQK combo founded!");
+    }
 
-        for(int i = 0 ; i< preSize;i++){
+    public void fillUpPlayersHand() {
+        int preSize = 9 - playerhand.getCurrentSize();
+
+        for (int i = 0; i < preSize; i++) {
             Card x = deck.remove();
             playerhand.addNewEntry(x);
-            System.out.println(x.toString()+" Added to the player hand!");
+            System.out.println(x.toString() + " Added to the player hand!");
 
         }
 
     }
 
-    //TO DO
-    public void removeJQK(){
-        //Should check if we have this JQK
-    }
+
 
     //TO DO
-    public void giveHint(){
+    public void giveHint() {
         //check for JQK
         //Check 11
     }
 
     //TO Do
-    public void checkJQK(CardStack<Card> faceUp){
-        //check if the user have JQK faced up at the same time.Return boolean.
+    public boolean checkJQK(CardStack<Card> faceUp) {
+        int count = 0;
+        for (int i = 0; i < faceUp.getCurrentSize(); i++) {
+            if (playerhand.getElementById(i).getCardRank().equals("K")) count++;
+            else if (playerhand.getElementById(i).getCardRank().equals("Q")) count++;
+            else if (playerhand.getElementById(i).getCardRank().equals("J")) count++;
+            else continue;
+        }
+        return count >= 3;
 
     }
+
     //Check for 11 TO DO
-    public void check11(){
+    public void check11() {
+        int index = 0;
+        int firstElement = playerhand.removeElementAt(index).getCardRate();
         // it will check if any of the combo of the number will make in sum 11.
     }
 
     //TO DO
-    public void checkLost(){
+    public void checkLost() {
         //we have to check if not check11() AND not checkJQK() than return true game won.
     }
 
     //To DO
-    public boolean checkWin(){
+    public boolean checkWin() {
         return deck.getCurrentSize() == 0;
     }
-
 
 
     public CardStack<Card> getDeck() {
@@ -124,7 +140,6 @@ public class Deck {
     public CardStack<Card> getPlayerhand() {
         return playerHand();
     }
-
 
 
 }

@@ -6,10 +6,9 @@ import java.util.Scanner;
 public class GameApp {
     public static void main(String[] args) {
         Deck Cards = new Deck();
+        System.out.println("Cards were generated and shuffled!");
         Cards.generateCards();
         CardStack<Card> deck = Cards.getDeck();
-        System.out.println(Arrays.toString(deck.toArray()));
-        deck.shuffle();
         System.out.println(Arrays.toString(deck.toArray()));
         Cards.getPlayerhand();
 
@@ -23,52 +22,12 @@ public class GameApp {
             x++;
 
         }
-
-        //Add method to the 11 when removing cards
-        //Create method to remove JQK
-        //Create Queue
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//        System.out.println("Welcome to the game ");
-//        carddeck.generateCards();
-//        CardStack<Card> cs = carddeck.getDeck();
-//        System.out.println(Arrays.toString(carddeck.getPlayerhand().toArray()));
-//        System.out.println(Arrays.toString(cs.toArray()));
-
-
-
-
-
-
-
-
-
-//        //Create the fuckin deck.
-//        Deck deck1 = new Deck();
-//        deck1.generateCards();
-//        // Create a variable of cardstack type and asign our list using getdeck.
-//        CardStack<Card> cs = deck1.getDeck();
-//        System.out.println(Arrays.toString(cs.toArray()));
-//        System.out.println(cs.isEmpty());
-//        cs.shuffle();
-//        System.out.println(Arrays.toString(cs.toArray()));
-
-
     }
 
 
 
 }
+
+
+
+
