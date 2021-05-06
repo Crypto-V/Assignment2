@@ -1,16 +1,37 @@
+/*Software Development II. Assignment 2
+ *Cards Game: Elevens
+ *Student: Vasile Verejan
+ *Student: Jatan Patel
+ *Teacher: Zeeshan Chaudhry
+ */
 package elevensGame;
 
-public interface CardStackInterface <T> {
+public interface CardStackInterface<T> {
+
+    public T getElementById(int index);
+    /*
+    Get the element from the array without removing it and returning
+    actual object.
+    */
+
+    public void shuffle();
+    /*
+    This method will shuffle the deck of cards in place based on the random value and
+    without returning any value.
+    */
+
     public int getCurrentSize();
     /*Returns the number of elements currently contained in the stack*/
 
     public boolean isEmpty();
-    /*Test for empty stack
+    /*
+    Test for empty stack
     @return -(boolean) true if the number of elements is zero,false otherwise
     */
 
     public boolean addNewEntry(T newEntry);
-    /*Test for spare capacity in the card stack and if exists, add new element
+    /*
+    Test for spare capacity in the card stack and if exists, add new element
     and increment the number of elements in the bag
 
     @param (T) newEntry - the item to be added to the stack
@@ -19,15 +40,17 @@ public interface CardStackInterface <T> {
     */
 
     public T remove();
-    /*Remove any card from the card stack if it is available,
+    /*
+    Remove any card from the card stack if it is available,
     and decrement the number of elements.Return the card that was removed or
-    null if none is avalable.
+    null if none is available.
 
     @return -(T) the element removed from the bag, or null.
     */
 
     public boolean remove(T anEntry);
-    /*Remove the specified elemnet from the bag, if it is present, and decrement the number of elements.
+    /*
+    Remove the specified element from the bag, if it is present, and decrement the number of elements.
 
     @return - (boolean) true if the element is available, false otherwise.
     */
@@ -36,7 +59,8 @@ public interface CardStackInterface <T> {
     /*Empty the card stack*/
 
     public int getFrequencyOf(T anEntry);
-    /*count how many times a given element appears in the stack
+    /*
+    count how many times a given element appears in the stack
 
     @param (T) anEntry - the card to look for in the stack
 
@@ -44,7 +68,8 @@ public interface CardStackInterface <T> {
     */
 
     public boolean contains(T anEntry);
-    /*check for the presence of the specified element in the cardStack
+    /*
+    check for the presence of the specified element in the cardStack
 
     @param (T) anEntry - the item to look for in the stack
 
@@ -52,11 +77,11 @@ public interface CardStackInterface <T> {
     */
 
     public T[] toArray();
-    /*find all elements in the bag
+    /*
+    find all elements in the bag
 
     @return -(T[]) - an array of size number of elements, containing all cards from the stack.
     */
-
 
 
 }

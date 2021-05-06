@@ -1,3 +1,47 @@
+Code Mess Tests before Implementation
+
+
+ if (Cards.check11()) {
+                            System.out.println("  -- Chose your 11 pair! --");
+                            System.out.println("-Enter one number at the time!-");
+                            Cards.remove2(input.nextInt(), input.nextInt());
+                        } else System.out.println("No more 11 pairs, Try to take a hint!");
+                    }
+                    break;
+
+
+
+
+
+                    if (x > 9 || y > 9 || x < 1 || y < 1) {
+                                throw new IndexOutOfBoundsException("Index is above the allowed number, it should be < 9 ");
+                            } else {
+                                //This method will remove 2 cards from the player hand if in sum will make 11,
+                                //which automatically is filtering the J Q K cards since the value of each card is above 11.
+                                int xValue = playerhand.getElementById(x - 1).getCardRate();
+                                int yValue = playerhand.getElementById(y - 1).getCardRate();
+                                int sum = xValue + yValue;
+
+                                Card first = playerhand.getElementById(x - 1);
+                                Card second = playerhand.getElementById(y - 1);
+
+                                //If the cards the were passed will make in sum 11 program
+                                // will continue to removing the cards from the deck.
+                                //else it will display that numbers don't make 11 in sum.
+                                if (sum == 11) {
+                                    playerhand.remove(first);
+                                    System.out.println(first.toString() + " was removed!");
+
+                                    playerhand.remove(second);
+                                    System.out.println(second.toString() + " was removed!");
+                                    System.out.println("\nCards in deck: ( " + deck.getCurrentSize() + " )\n");
+                                    fillUpPlayersHand();
+                                } else {
+                                    System.out.println("Numbers you entered doesn't make 11 in sum! ");
+                                }
+
+                            }
+
 
 
 
@@ -22,7 +66,7 @@
 
 
 
-//        //Create the fuckin deck.
+//        //Create the deck.
 //        Deck deck1 = new Deck();
 //        deck1.generateCards();
 //        // Create a variable of cardstack type and asign our list using getdeck.

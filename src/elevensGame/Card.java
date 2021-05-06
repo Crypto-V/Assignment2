@@ -1,19 +1,23 @@
+/*Software Development II. Assignment 2
+ *Cards Game: Elevens
+ *Student: Vasile Verejan
+ *Student: Jatan Patel
+ *Teacher: Zeeshan Chaudhry
+ */
 package elevensGame;
+/*
+ *Card Class
+ *Responsible for creating a card object.
+ *The further explanation is provided inside of each method.
+ */
 
 public class Card {
     private String cardSuit;
     private String cardRank;
     private int cardRate;
 
-    public Card() {
-        //Default constructor.
-        cardRank = null;
-        cardSuit = null;
-        cardRate = 0;
-    }
-
-    public Card(String rank, String suit, int rate){
-        //Overloaded constructor that takes rank,suit and rate and assigns
+    public Card(String rank, String suit, int rate) {
+        //Constructor that takes rank,suit and rate and assigns
         // it to the object variables.
         cardSuit = suit;
         cardRank = rank;
@@ -37,10 +41,9 @@ public class Card {
 
     public String toString() {
         //Return the string format of our output value.
-            String str = "[";
-            str += cardRank +" of "+cardSuit+" Rate: "+cardRate;
-            str += "]";
-            return str;
+        String str = "[";
+        str += cardRank + " of " + cardSuit + " Rate: " + cardRate;
+        str += "]";
+        return str;
     }
-
 }

@@ -1,15 +1,27 @@
+/*Software Development II. Assignment 2
+ *Cards Game: Elevens
+ *Student: Vasile Verejan
+ *Student: Jatan Patel
+ *Teacher: Zeeshan Chaudhry
+ */
 package elevensGame;
 
 import java.util.Random;
+
+/*
+CardStack is similar to ArrayBag except couple new methods,
+the methods and description can be found in the CardStackInterface.
+*/
 
 public final class CardStack<T> implements CardStackInterface<T> {
     private T[] deck;
     private int numOfEntries;
     private static final int def_capacity = 52;
-    private boolean initialised = false;
+    private boolean initialised;
     private static final int MAX_CAPACITY = 10000;
 
     public T getElementById(int index) {
+        //Return the element base on the index that was passed in by the user.
         T result = null;
         if (!isEmpty() && index >= 0 && index < numOfEntries) {
             result = deck[index];
